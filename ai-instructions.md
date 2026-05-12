@@ -14,9 +14,9 @@ He leads at the intersection of **engineering execution**, **team building**, an
 
 ## Career Narrative
 
-- **Foundation (2000–2012, Rackspace):** Grew from systems engineer to senior manager. Became a deep technical expert in Linux infrastructure and networking, then transitioned into leading teams and managing customer relationships at scale.
+- **Foundation (2003–2012, Rackspace):** Grew from systems engineer to senior manager. Became a deep technical expert in Linux infrastructure and networking, then transitioned into leading teams and managing customer relationships at scale.
 - **Operations & Scale (2016–2024, AllClear ID):** Ran a multi-disciplinary org (Product, Engineering, IT, Privacy, Support, Security). Drove ISO 27001 certification, large-scale platform migrations, cost optimization, and a fully remote transition — all without service disruption.
-- **Platform & AI Leadership (2024–Present, Health Bank One):** VP of Platform Engineering at a patient-controlled health data startup. Leading SOC2 Type II compliance, CI/CD modernization, mobile app lifecycle, and the integration of generative AI into both products and internal tooling.
+- **Platform & AI Leadership (2024–Present, Health Bank One (formerly AllClear ID)):** VP of Platform Engineering at a patient-controlled health data startup. Leading SOC2 Type II compliance, CI/CD modernization, mobile app lifecycle, and the integration of generative AI into both products and internal tooling.
 
 ---
 
@@ -78,7 +78,7 @@ The canonical resume is [`resume.md`](./resume.md). Always derive facts from tha
 | LinkedIn | linkedin.com/in/jbchoe |
 | Site | jasonchoe.github.io |
 | Current Title | VP of Platform Engineering |
-| Current Company | Health Bank One |
+| Current Company | Health Bank One (formerly AllClear ID) |
 | Years of Experience | 20+ |
 | Education | BS Electrical Engineering, UT Austin |
 | Top Certifications | RHCE, ITIL Foundation, UT Austin General Management Certificate |
