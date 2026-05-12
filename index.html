@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -148,7 +149,54 @@
           <span class="toc-arrow">›</span>
         </a>
       </li>
+      <li>
+        <a href="#contact" id="contact-toggle" onclick="toggleContact(event)">
+          <div class="toc-icon" style="background:#1a2a1a;">✉️</div>
+          <div class="toc-text">
+            <strong>Contact</strong>
+            <span>Get in touch</span>
+          </div>
+          <span class="toc-arrow" id="contact-arrow">›</span>
+        </a>
+        <div id="contact-section" style="display:none; padding: 20px 48px 24px; border-top: 1px solid #222;">
+          <div id="contact-captcha">
+            <p style="font-size:13px; color:#888; margin-bottom:14px;">Verify you're human to reveal my email.</p>
+            <div class="cf-turnstile"
+                 data-sitekey="0x4AAAAAADNoIrY2T6vDW9G8"
+                 data-callback="onTurnstileSuccess"
+                 data-theme="dark">
+            </div>
+          </div>
+          <div id="contact-email" style="display:none;">
+            <p style="font-size:13px; color:#888; margin-bottom:8px;">Reach me at:</p>
+            <a id="email-link" href="#" style="font-size:15px; font-weight:600; color:#7eaed4; text-decoration:none;"></a>
+          </div>
+        </div>
+      </li>
     </ul>
   </div>
+
+  <script>
+    // Email stored obfuscated — joined at runtime only after CAPTCHA passes
+    const _e = ['jbchoe', '@', 'gmail', '.', 'com'];
+
+    function toggleContact(e) {
+      e.preventDefault();
+      const section = document.getElementById('contact-section');
+      const arrow = document.getElementById('contact-arrow');
+      const open = section.style.display === 'block';
+      section.style.display = open ? 'none' : 'block';
+      arrow.textContent = open ? '›' : '‹';
+    }
+
+    function onTurnstileSuccess(token) {
+      const email = _e.join('');
+      document.getElementById('contact-captcha').style.display = 'none';
+      const link = document.getElementById('email-link');
+      link.textContent = email;
+      link.href = 'mailto:' + email;
+      document.getElementById('contact-email').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
