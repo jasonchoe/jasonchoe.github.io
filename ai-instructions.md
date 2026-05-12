@@ -15,6 +15,7 @@ He leads at the intersection of **engineering execution**, **team building**, an
 ## Career Narrative
 
 - **Foundation (2003–2012, Rackspace):** Grew from systems engineer to senior manager. Became a deep technical expert in Linux infrastructure and networking, then transitioned into leading teams and managing customer relationships at scale.
+- **Sabbatical (Mar 2015–Jun 2016):** Intentional career break to pursue personal goals — mastered brisket smoking, built woodworking skills, and got married. Not a gap to explain away; a deliberate reset before re-entering the workforce.
 - **Operations & Scale (2016–2024, AllClear ID):** Ran a multi-disciplinary org (Product, Engineering, IT, Privacy, Support, Security). Drove ISO 27001 certification, large-scale platform migrations, cost optimization, and a fully remote transition — all without service disruption.
 - **Platform & AI Leadership (2024–Present, Health Bank One (formerly AllClear ID)):** VP of Platform Engineering at a patient-controlled health data startup. Leading SOC2 Type II compliance, CI/CD modernization, mobile app lifecycle, and the integration of generative AI into both products and internal tooling.
 
