@@ -1,17 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jason Choe — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #f5f5f3;
+      padding: 48px 24px;
+    }
+
+    #resume {
+      background: #fff;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 64px;
+      border-radius: 4px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    /* H1 — name */
+    #resume h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #0f2d52;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+
+    /* Paragraph immediately after h1 (location / links) */
+    #resume h1 + p {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 0;
+    }
+
+    #resume h1 + p a {
+      color: #1a5276;
+      text-decoration: none;
+    }
+
+    #resume h1 + p a:hover { text-decoration: underline; }
+
+    /* HR — dividers */
+    #resume hr {
+      border: none;
+      border-top: 2px solid #0f2d52;
+      margin: 16px 0 24px;
+    }
+
+    /* H2 — section headings */
+    #resume h2 {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #0f2d52;
+      border-bottom: 1px solid #dce6f0;
+      padding-bottom: 5px;
+      margin: 32px 0 14px;
+    }
+
+    /* H3 — job titles */
+    #resume h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #111;
+      margin: 20px 0 2px;
+    }
+
+    #resume h3:first-of-type { margin-top: 0; }
+
+    /* Paragraph — used for company/date lines after h3 */
+    #resume h3 + p {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 6px;
+    }
+
+    #resume h3 + p strong {
+      color: #1a5276;
+      font-weight: 600;
+    }
+
+    /* General paragraphs */
+    #resume p {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    #resume p strong { color: #111; }
+
+    /* Lists */
+    #resume ul {
+      padding-left: 1.25em;
+      margin-bottom: 12px;
+    }
+
+    #resume li {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    #resume li strong {
+      color: #111;
+      font-weight: 600;
+    }
+
+    /* Italic / em */
+    #resume em { color: #555; }
+
+    @media (max-width: 640px) {
+      #resume { padding: 32px 24px; }
+      body { padding: 0; }
+      #resume { border-radius: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div id="resume"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+  <script id="md-source" type="text/markdown">
 # Jason Choe
 
 Austin, Texas | [linkedin.com/in/jbchoe](https://linkedin.com/in/jbchoe) | [jasonchoe.github.io](https://jasonchoe.github.io)
-
----
-
-## Table of Contents
-
-- [Summary](#summary)
-- [Experience](#experience)
-- [Education](#education)
-- [Certifications](#certifications)
-- [Skills](#skills)
-- [AI Agent Instructions](./ai-instructions.md)
 
 ---
 
@@ -97,3 +222,10 @@ Activities: IEEE
 ## Skills
 
 Artificial Intelligence (AI) · Google Kubernetes Engine (GKE) · Mobile Application Development · Cloud Strategy · CI/CD · Security & Compliance (SOC2 / ISO 27001) · Product Roadmap · DevOps · Technical Leadership · P&L Management · Cross-Functional Team Leadership
+  </script>
+  <script>
+    const md = document.getElementById('md-source').textContent;
+    document.getElementById('resume').innerHTML = DOMPurify.sanitize(marked.parse(md));
+  </script>
+</body>
+</html>

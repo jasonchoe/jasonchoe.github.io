@@ -1,3 +1,152 @@
-test
-123
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jason Choe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #f5f5f3;
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+    }
+
+    .card {
+      background: #fff;
+      max-width: 560px;
+      width: 100%;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .card-header {
+      padding: 40px 48px 32px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .card-header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #0f2d52;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+
+    .card-header p {
+      font-size: 13px;
+      color: #888;
+    }
+
+    .card-header a {
+      color: #1a5276;
+      text-decoration: none;
+    }
+
+    .card-header a:hover { text-decoration: underline; }
+
+    .toc {
+      list-style: none;
+      padding: 8px 0;
+    }
+
+    .toc li a {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 48px;
+      text-decoration: none;
+      color: #1a1a1a;
+      transition: background 0.12s;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .toc li:last-child a { border-bottom: none; }
+
+    .toc li a:hover { background: #f9f9f7; }
+
+    .toc-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+
+    .toc-icon.blue   { background: #e8f0f8; }
+    .toc-icon.red    { background: #fdecea; }
+    .toc-icon.purple { background: #f0ecfb; }
+
+    .toc-text strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .toc-text span {
+      font-size: 12px;
+      color: #888;
+    }
+
+    .toc-arrow {
+      margin-left: auto;
+      color: #ccc;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <h1>Jason Choe</h1>
+      <p>Austin, Texas &nbsp;·&nbsp; <a href="https://linkedin.com/in/jbchoe">linkedin.com/in/jbchoe</a> &nbsp;·&nbsp; <a href="https://jasonchoe.github.io">jasonchoe.github.io</a></p>
+    </div>
+    <ul class="toc">
+      <li>
+        <a href="resume.html">
+          <div class="toc-icon blue">📄</div>
+          <div class="toc-text">
+            <strong>Resume</strong>
+            <span>Full work history & skills</span>
+          </div>
+          <span class="toc-arrow">›</span>
+        </a>
+      </li>
+      <li>
+        <a href="resume.pdf">
+          <div class="toc-icon red">📕</div>
+          <div class="toc-text">
+            <strong>PDF</strong>
+            <span>Download printable version</span>
+          </div>
+          <span class="toc-arrow">›</span>
+        </a>
+      </li>
+      <li>
+        <a href="ai-instructions.md">
+          <div class="toc-icon purple">🤖</div>
+          <div class="toc-text">
+            <strong>AI Agents</strong>
+            <span>Context & instructions for AI agents</span>
+          </div>
+          <span class="toc-arrow">›</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
